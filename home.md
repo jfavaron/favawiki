@@ -52,7 +52,10 @@ Also has a mysql db running on Port 32768
 https://snipe-it.readme.io/docs/docker
 
 First run MySQL for Snipe
-`docker run --name snipe-mysql --env-file=/opt/snipiet/my_env_file.env -d -P mysql:5.6`
+`docker run --name snipe-mysql --env-file=/opt/snipeit/my_env_file.env -d -P mysql:5.6`
+
+Then run the actual service
+`docker run -d -p 81:80 --name="snipeit" --link snipe-mysql:mysql --env-file=/opt/snipeit/my_env_file.env snipe/snipe-it`
 
 ### Home Assistant
 For controlling the home
