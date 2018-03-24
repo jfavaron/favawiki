@@ -31,6 +31,9 @@ Has two separate containers, a mongo db and the main one. If needed, exec into t
 Meant for controlling all of the other docker containers.
 Port 9000
 
+`docker volume create portainer_data`
+`docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer`
+
 ### Plex
 For movies, tv shows, images, recordings, music.
 Port 32400
