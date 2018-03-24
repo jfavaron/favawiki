@@ -3,6 +3,17 @@
 
 # Header
 
+# Favanet Services
+## Non - /opt/
+
+### Home Assistant
+
+For controlling the home
+
+Port 8123
+
+### Favawiki
+
 Wiki has its own repo, so it's in a separate location.
 
 `~/wiki`
@@ -17,3 +28,26 @@ If you have those two files in `~/wiki` and still have all of the markdown files
 Should never have to manually set up or lose data on the Wiki again. Also the files are now portable to other systems (or just readable via git....)
 
 https://github.com/jfavaron/favawiki
+
+Has two separate containers, a mongo db and the main one. If needed, exec into the image and go use `cd /logs` to look at log outputs.
+
+## /opt/
+
+### Portainer
+Meant for controlling all of the other docker containers.
+Port 9000
+
+### Plex
+For movies, tv shows, images, recordings, music.
+Port 32400
+
+### Couchpotato
+For downloading Movies
+Port 5050
+
+### Snipe
+For tracking all inventory in the house
+Port 81
+
+Also has a mysql db running on Port 32768
+
