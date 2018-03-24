@@ -47,6 +47,8 @@ Port 32400
 For downloading Movies
 Port 5050
 
+`docker create --name=couchpotato -p 5050:5050 -v /opt/couchpotato/config:/config -v /mnt/md0/public/tmp/:/downloads -v /mnt/md0/public/Movies/:/movies linuxserver/couchpotato`
+
 ### Snipe
 For tracking all inventory in the house
 Port 81
