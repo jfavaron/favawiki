@@ -41,6 +41,8 @@ Port 9000
 For movies, tv shows, images, recordings, music.
 Port 32400
 
+`docker run -d --name plex --network=host -e TZ="America/Denver" -v /opt/plex/config:/config -v /mnt/md0/public/Movies:/data/Movies -v /mnt/md0/public/TV:/data/TV -v /mnt/md0/public/Music:/data/Music -v /mnt/md0/public/Images:/data/Images -p 32400:32400 plexinc/pms-docker`
+
 ### Couchpotato
 For downloading Movies
 Port 5050
