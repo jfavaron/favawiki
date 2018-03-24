@@ -49,6 +49,11 @@ Port 81
 
 Also has a mysql db running on Port 32768
 
+https://snipe-it.readme.io/docs/docker
+
+First run MySQL for Snipe
+`docker run --name snipe-mysql --env-file=/opt/snipiet/my_env_file.env -d -P mysql:5.6`
+
 ### Home Assistant
 For controlling the home
 Port 8123
