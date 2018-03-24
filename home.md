@@ -6,12 +6,6 @@
 # Favanet Services
 ## Non - /opt/
 
-### Home Assistant
-
-For controlling the home
-
-Port 8123
-
 ### Favawiki
 
 Wiki has its own repo, so it's in a separate location.
@@ -55,3 +49,8 @@ Port 81
 
 Also has a mysql db running on Port 32768
 
+### Home Assistant
+For controlling the home
+Port 8123
+
+`docker run -d --name="home-assistant" -v /opt/homeassistant:/config -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/home-assistant`
